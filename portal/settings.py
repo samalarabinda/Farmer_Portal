@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'portal.wsgi.application'
 
 DATABASES = {
       'default': {
-       "ENGINE": "django.db.backends.mysql",
+       "ENGINE": "django.db.backends.postgresql",
         "URL": env("DJANGO_DB_URL"),
         "NAME": env("DJANGO_DB_NAME"),
         "USER": env("DJANGO_DB_USER"),
