@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update</title>
+    <link rel="stylesheet" href="{% static './css/user_update.css' %}">
+    </style>
+</head>
+<body>
+    {{user.username}}
+    <div class="form-container">
+        <div id="message">{{data}}</div>
+        <h1>  Update Your Product</h1>
+        <form  method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label class="form-label" for="name">Name:</label>
+                <input class="form-input" type="text" id="name" name="name" value={{update_user.uname}} required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="place">Place:</label>
+                <input class="form-input" type="text" id="place" name="place" value={{update_user.uplace}} required>
+                <ul id="districtList" class="district-list"></ul>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="name">Block:</label>
+                <input class="form-input" type="text" id="block" name="block" value={{update_user.ublock}} required>
+                <ul id="blockList" class="block-list"></ul>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="date">Date:</label>
+                <input class="form-input" type="date" id="date" name="date" value={{update_user.udate}} required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="product_name">Product Name:</label>
+                <input class="form-input" type="text" id="product_name" name="product_name" value={{update_user.product_name}} required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="product_amount">Product Weight:</label>
+                <input class="form-input" type="text" id="product_amount" name="product_weight" value={{update_user.product_weight}} required>
+            </div>
+            <button class="form-button" type="submit">Save</button>
+        </form>
+    </div>
+    <script src="{% static './javascript/user_update.js' %}"></script>
+
+    
+
+</body>
+</html>

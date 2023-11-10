@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Information</title>
+    
+   
+    <link rel="stylesheet" href="{% static './css/UserAccount.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="{% static "./images/logo.png" %}" alt="Logo">
+        </div>
+        <h3 id="identity">welcome: {{user.username}}</h3>
+        <ul>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+        
+        
+    </div>
+    
+    <div class="form-container">
+        <div id="message">{{data}}</div>
+        <h1>  Add Your Product Here</h1>
+        <form action="{% url 'User_Product_details' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label class="form-label" for="name">Name:</label>
+                <input class="form-input" type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="place">District:</label>
+                <input type="text" id="place" class="form-input" placeholder="Enter Your district" name="place">
+             <ul id="districtList" class="district-list"></ul>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="name">Block:</label>
+                <input class="form-input" type="text" id="block" name="block" required>
+                <ul id="blockList" class="block-list"></ul>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="date">Date:</label>
+                <input class="form-input" type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="product_name">Product Name:</label>
+                <input class="form-input" type="text" id="product_name" name="product_name" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="product_amount">Product Weight:</label>
+                <input class="form-input" type="text" id="product_amount" name="product_weight" required>
+            </div>
+            <button class="form-button" type="submit">Submit</button>
+        </form>
+    </div>
+
+
+
+    
+    <script src="{% static './javascript/UserAccount.js' %}"></script>
+    <script src="{% static './javascript/Account_user.js' %}"></script>
+   
+</body>
+</html>

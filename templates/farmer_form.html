@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './css/farmer-form.css' %}">
+    <title>Farmer Information Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Farmer Information</h1>
+        <form  method="post" onsubmit="return validateForm()">
+            {% csrf_token %}
+            <label for="fatherName">Your Name</label>
+            <input type="text" id="fatherName" name="yourName" autocomplete="on" required>
+            <label for="fatherName">Father's Name</label>
+            <input type="text" id="fatherName" name="fatherName" autocomplete="on" required>
+
+            <label for="mobileNumber">Mobile Number</label>
+            <input type="tel" id="mobileNumber" name="mobileNumber" autocomplete="on"  required>
+
+            <label for="mailId">Mail Id</label>
+            <input type="email" id="mailId" name="mailId" autocomplete="on" required>
+
+            <label for="aadhaarNumber">Aadhaar Card Number</label>
+            <input type="text" id="aadhaarNumber" name="aadhaarNumber" autocomplete="on" required>
+
+            <label for="panNumber">PAN Card Number</label>
+            <input type="text" id="panNumber" name="panNumber" autocomplete="on" required>
+
+            <label for="landArea">Land Area (in acres)</label>
+            <input type="number" id="landArea" name="landArea" step="0.01" autocomplete="on" required>
+
+            <label for="accountNumber">Account Number</label>
+            <input type="text" id="accountNumber" name="accountNumber" autocomplete="on" required>
+
+            <label for="ifscCode">IFSC Code</label>
+            <input type="text" id="ifscCode" name="ifscCode" autocomplete="on" required>
+
+            <label for="bankName">Bank Name</label>
+            <input type="text" id="bankName" name="bankName" autocomplete="on" required>
+
+            <label for="loanDetails">Loan Details</label>
+            <textarea id="loanDetails" name="loanDetails" rows="4" autocomplete="on" required></textarea>
+
+            <label for="investmentSize">First Time Investment Size</label>
+            <input type="number" id="investmentSize" name="investmentSize" step="0.01" autocomplete="on" required>
+
+            <label for="jobCardNumber">Job Card Number</label>
+            <input type="text" id="jobCardNumber" name="jobCardNumber" autocomplete="on" required>
+
+            <hr>
+
+            <label for="farmerName1">Referral Farmer Name(if any) </label>
+            <input type="text" id="farmerName1" name="farmerName1" autocomplete="on" >
+
+            <label for="mobileNumber1">Mobile Number </label>
+            <input type="tel" id="mobileNumber1" name="mobileNumber1" autocomplete="on" >
+
+            <label for="land1">Land Area  (in acres)</label>
+            <input type="number" id="land1" name="land1" step="0.01" autocomplete="on" >
+
+            <label for="anotherFarmerName">Referral Farmer Name(If any)</label>
+            <input type="text" id="anotherFarmerName" name="anotherFarmerName" autocomplete="on" >
+
+            <label for="mobileNumber2">Mobile Number </label>
+            <input type="tel" id="mobileNumber2" name="mobileNumber2" autocomplete="on" >
+
+            <label for="landArea2">Land Area  (in acres)</label>
+            <input type="number" id="landArea2" name="landArea2" step="0.01" autocomplete="on" >
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="{% static './javascript/farmer_form.js' %}"></script>
+
+  
+</body>
+</html>

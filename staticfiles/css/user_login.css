@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9f2f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #00325a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 94%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #45a049;
+}
+
+.form-group p {
+    text-align: center;
+    margin-top: 10px;
+    
+}
+p{
+    color:#00dbd3;
+}
+
+.form-group p a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+p a{
+    color:#ffffff;
+}
+p a:hover{
+    color:green;
+}
+
+.form-group p a:hover {
+    
+    text-decoration: underline;
+}
+#heading{
+    text-align:center;
+    color:#7da3b8;
+    
+}
+
+#message {
+text-align: center;
+margin-top: 20px;
+color:red;
+
+}
+#message1 {
+text-align: center;
+margin-top: 20px;
+color:red;
+
+}
+.add{
+color:white;
+}
+.agent{
+text-align:center;
+font-size:25px;
+font-family: poppins Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.agent a{
+color:rgb(255, 255, 255);
+}
+.agent a:hover{
+color:green;
+}
+
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width:72px;
+    height:auto;
+}

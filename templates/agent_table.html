@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agent-Table</title>
+       
+
+    <link rel="stylesheet" href="{% static './css/agent_table.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="{% static "./images/logo.png" %}" alt="Logo">
+        </div>
+        <h3 id="identity">welcome: {{user.username}}</h3>
+        <ul>
+            <li><a href="{% url 'agent_logout' %}">Logout</a></li>
+        </ul>
+        
+        
+    </div>
+    
+    {% load custom_tags %} 
+    <div class="response-box">
+        <h2>Your metting Id: </h2>
+       <a href="{% get_latest_response %}" id="check">{% get_latest_response %}</a> 
+    </div>
+    <h1>Customer Product Information</h1>
+    <div class="put">
+    <label for="search-box" id="search">Seach Here :</label>
+    <input type="text" id="search-box" placeholder="Search..." autocomplete="on">
+</div>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>District</th>
+                <th>Block</th>
+                <th>Date</th>
+                <th>Product Name</th>
+                <th>Product weight</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            
+            {% for i in add %}
+           
+            <tr>
+                <td>{{i.uname}}</td>
+                <td>{{i.uplace}}</td>
+                <td>{{i.ublock}}</td>
+                <td>{{i.udate}}</td>
+                <td>{{i.product_name}}</td>
+                <td>{{i.product_weight}}</td>
+                <td><button><a href="/update-user/{{i.id}}">Edit</a></button></td>
+            </tr>
+           
+            {% endfor %}
+            
+            <!-- Add more rows as needed -->
+        </tbody>
+
+    </table>
+    <script src="{% static './javascript/agent_table.js' %}"></script> 
+   
+    
+</body>
+</html>

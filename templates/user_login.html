@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login Form</title>
+    <link rel="stylesheet" href="{% static './css/user_login.css' %}">
+
+    
+</head>
+<body>
+   
+   
+    <div class="container">
+        <div class="logo">
+        <img src="{% static "./images/logo.png" %}" alt="">
+    </div>
+       <h1 id="heading">Farmer Login</h1>
+        <form id="loginForm" action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <div id="message">{{data}}</div>
+            <div id="message1">{{context}}</div>
+            <div class="form-group">
+                <label for="email" class="add">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password" class="add">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit">Login</button>
+            </div>
+            
+            <p>Don't have an account? <a href=" {% url 'register' %}  ">Register</a></p>
+            <p class="agent"> <a href="{% url 'agent_register' %}">Block Manager</a></p>
+</div>
+            
+        </form>
+    </div>
+ 
+</body>
+</html>

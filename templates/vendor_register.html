@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gent Registration Form</title>
+    <link rel="stylesheet" href="{% static './css/vendor_register.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{% static "./images/logo.png" %}" alt="">
+        </div>
+        <h1 id="create">Create Your Account</h1>
+        <form action="{% url 'agent_register' %}" method="post">
+             {% csrf_token %}
+             <div id="message1">{{context}}</div>
+             <div id="message">{{data}}</div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email" class="con" >Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+              <button type="submit">Register</button> 
+            </div>
+            <p>Already have an account? <a href=" {% url 'agent_login' %} ">Log in</a></p>
+            <p id="note">Note : Email  and Password will be used for  login purposes</p>
+        </form>
+    </div>
+</body>
+</html>
