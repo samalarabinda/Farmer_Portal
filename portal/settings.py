@@ -29,7 +29,7 @@ SECRET_KEY = env("DJNAGO_SECURITY_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DJANGO_DEBUG")
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["farmer-portal-topaz.vercel.app"]
 
 
 # Application definition
@@ -83,6 +83,7 @@ WSGI_APPLICATION = 'portal.wsgi.application'
 DATABASES = {
       'default': {
        "ENGINE": "django.db.backends.mysql",
+        "URL": env("DJANGO_DB_URL"),
         "NAME": env("DJANGO_DB_NAME"),
         "USER": env("DJANGO_DB_USER"),
         "PASSWORD":env("DJANGO_DB_PASSWORD") ,
