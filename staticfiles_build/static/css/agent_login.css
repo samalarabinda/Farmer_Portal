@@ -7,11 +7,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-   
+    background-image: url('../images/Farmer2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
-    background-color: #b0c0d0;
+    background-color: #00325a;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -27,7 +30,6 @@ body {
     display: block;
     font-size: 14px;
     margin-bottom: 5px;
-    font-weight:bold;
 }
 
 .form-group input {
@@ -60,33 +62,52 @@ body {
 
 .form-group p {
     text-align: center;
-}
-#account{
-    text-align:center;
-    
-}
-#message {
-    text-align: center;
-    margin-top: 20px;
-    color:red;
-}
-#message1{
-    text-align: center;
-    margin-top: 20px;
-    color:green;
-}
-.agent{
-    text-align:center;
-    font-size:25px;
-    font-family: poppins Verdana, Geneva, Tahoma, sans-serif;
-    
+    margin-top: 10px;
 }
 
-.agent a{
-    color:blue;
+.form-group p a {
+    color: #4CAF50;
+    text-decoration: none;
 }
-.agent a:hover{
+
+.form-group p a:hover {
+    
+    text-decoration: underline;
+}
+p{
+    color:#00dbd3;
+}
+p a{
+    color:white;
+}
+p a:hover{
     color:green;
+}
+
+#message {
+text-align: center;
+margin-top: 20px;
+color:red;
+
+}
+#message1 {
+text-align: center;
+margin-top: 20px;
+color:red;
+
+}
+#user-message{
+text-align: center;
+margin-top: 20px;
+color:red;
+
+}
+#product{
+text-align:center;
+color:#7da3b8;
+}
+.add{
+color:white;
 }
 
 .logo{
