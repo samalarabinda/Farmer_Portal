@@ -29,7 +29,7 @@ SECRET_KEY = env("DJNAGO_SECURITY_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DJANGO_DEBUG")
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [".vercel.app",".now.sh","127.0.0.1","localhost"]
 
 
 # Application definition
@@ -82,8 +82,7 @@ WSGI_APPLICATION = 'portal.wsgi.application'
 
 DATABASES = {
       'default': {
-       "ENGINE": "django.db.backends.mysql",
-        
+       "ENGINE": "django.db.backends.postgresql",
         "NAME": env("DJANGO_DB_NAME"),
         "USER": env("DJANGO_DB_USER"),
         "PASSWORD":env("DJANGO_DB_PASSWORD") ,
@@ -132,7 +131,7 @@ STATICFILES_DIRS = [
    os.path.join(BASE_DIR, "static",) 
     
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build' 'staticfiles')
 
 
 # Default primary key field type
