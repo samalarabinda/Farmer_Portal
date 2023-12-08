@@ -67,7 +67,7 @@ def user_login(request):
 
 @login_required(login_url="/login")
 def user_dashboard(request):
-    return render(request,"user_dashboard.html")
+    return render(request,"User_Dashboard.html")
 
 #User add Product
 
