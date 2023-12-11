@@ -6,6 +6,9 @@ register = template.Library()
 
 @register.simple_tag
 def get_latest_response():
-    response = ResponseLog.objects.latest('timestamp')
-    return response.content if response else ""
+    try:
+        response = ResponseLog.objects.latest('timestamp')
+        return response.content
+    except ResponseLog.DoesNotExist:
+        return "Your Meeting link available soon........"
    

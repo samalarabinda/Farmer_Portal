@@ -30,44 +30,30 @@
                    
                 </p>
             </div>
-            <div class="social">
-                <div class="social-1">
-                    <div class="microsoft social-item">
-                        <a href="{% url "user_product_add" %}" class="link">
-                        <div>
-                            <h4>Add Your Product</h4>
-                           
-                        </div> 
-                    </a>   
-                    </div>
-                    <div class="social-2">
-                    <div class="facebook social-item">
-                        <a href="{% url "User_Product_details" %}" class="link">
-                        <div>
-                            <h4>Product Details</h4>
-                            
-                        </div> 
-                        </a>  
-                    </div>
+            <div class="content-containere">
+                <div class="product">
+                    <a href="{% url "user_product_add" %}" class="link">
+                    <h2>Add Your Product Here</h2>
+                </a>
                 </div>
-                <div class="social-2">
-                    <div class="google social-item">
-                        <a href="{% url "User_meeting" %}" class="link">
-                        <div>
-                            <h4>Your Meeting Link</h4>
-                            
-                        </div>
-                        </a>   
-                    </div>
-                   
+                <div class="product">
+                    <a href="{% url "User_Product_details" %}" class="link">
+                    <h2>Daily Product List</h2>
+                </a>
+                </div>
+                <div class="product">
+                    <a href="{% url "User_meeting" %}" class="link">
+                    <h2>Your Meeting Link</h2>
+                </a>
                 </div>
             </div>
            
         </main>
+<!--         
         <footer class="footer">
             <p>Designed by <a href="mailto:info@irodesigncom" title="Mail Us">Webysis Technologies</a></p>
             <p>All rights reserved©2017</p>
-        </footer>
+        </footer> -->
         
 </body>
 </html>
