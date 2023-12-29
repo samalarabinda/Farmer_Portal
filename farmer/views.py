@@ -100,7 +100,7 @@ def User_Product_details(request):
              "data":data
          }
         #  return render(request,"UserAccount.html",context)
-         return render(request,"user_Product_add.html",context)
+         return render(request,"user_product_add.html",context)
     return render(request,"User_Product_details.html",context)
 #User Meeting
 
